@@ -7,19 +7,8 @@ const chalk = require('chalk');
 var figlet = require('figlet');
 const ora = require('ora');
 
-
-
-// prompt.get(['test'],function (result, error) {
-//     if (error) {
-//         console.log(error);
-//     }
-//     console.log(result.test);
-// } )
-
-
-var country = 'belgium'; 
-console.log(chalk.blue (getName('be')));
-console.log(chalk.blue (getCode(country)));
+var arg = process.argv.slice(2);
+let country = arg[0];
 
 var date = new Date();
 var Year = date.getFullYear();
@@ -35,14 +24,14 @@ figlet('Here is the ' + CountryCode +' Holidays for ' + Year, function(err, data
 });
 
 
-const spinner = ora('Loading Holidays').start();
-setTimeout(() => {
-    spinner.color = 'blue';
-    spinner.text = 'Loading ' + CountryCode + ' Holidays';
-}, 1000);
-
 axios.get('https://date.nager.at/Api/v2/PublicHolidays/' + Year + '/' + CountryCode).then(response => {
-    console.log(response.data);
+    ;
+
+     for (let j = 0; j < response.data.length; j++) {
+        console.log(chalk.red(response.data[j].countryCode + " " +response.data[j].date + " " + response.data[j].name + " launch year " + response.data[j].launchYear ));
+      }
+    
+
 })
 .catch(console.error)
 
