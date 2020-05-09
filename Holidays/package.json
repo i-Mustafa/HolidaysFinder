@@ -1,0 +1,28 @@
+{
+  "name": "index.js",
+  "version": "1.0.0",
+  "description": "Holidays of a country",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-Mustafa/Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-Mustafa/Node/issues"
+  },
+  "homepage": "https://github.com/i-Mustafa/Node#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
+    "country-list": "^2.2.0",
+    "figlet": "^1.4.0",
+    "ora": "^4.0.4",
+    "prompt": "^1.0.0"
+  }
+}
