@@ -1,12 +1,23 @@
 {
-  "name": "index.js",
+  "name": "myholy",
   "version": "1.0.0",
-  "description": "Holidays of a country",
-  "main": "index.js",
+  "description": "Holiday of a country",
+  "main": "node.js",
+  "bin": {
+    "mustafa": "./node.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node node.js"
   },
+  "keywords": [
+    "holiday",
+    "holidayFinder",
+    "holiday finder",
+    "mustafa",
+    "vacances",
+    "vacance"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i-Mustafa/Node.git"
@@ -19,6 +30,7 @@
   "homepage": "https://github.com/i-Mustafa/Node#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "boxen": "^4.2.0",
     "chalk": "^4.0.0",
     "country-list": "^2.2.0",
     "figlet": "^1.4.0",

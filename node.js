@@ -6,6 +6,7 @@ const axios = require ('axios')
 const chalk = require('chalk');
 var figlet = require('figlet');
 const ora = require('ora');
+const boxen = require('boxen');
 
 
 var arg = process.argv.slice(2);
@@ -14,10 +15,9 @@ let country = arg[0];
 
 var date = new Date();
 var Year = date.getFullYear();
-
+const NEWLINE = "\n";
 
 if (getCode(country)) {
-    console.log("working")
     var CountryCode = (getCode(country));
     figlet('Here is the ' + CountryCode +' Holidays for ' + Year, function(err, data) {
         if (err) {
@@ -41,7 +41,20 @@ if (getCode(country)) {
 
 } else {
 
-    console.log("Tips how to use HolidayFinder");
-    console.log("* Start HolidayFinder by typeing   npm start +nameOfTheCountry");
-    console.log("* If you see this message please check your spelling if it's correct thats mean the country is not supported");
+    console.log(
+        chalk.green(
+            boxen(
+                [ "Tips how to use HolidayFinder:",
+                "* Start HolidayFinder by typing: npm start +nameOfTheCountry",
+                chalk.red("* If you see this message please check your spelling if it's correct that's mean the country is not supported."),
+                
+                ].join(NEWLINE),
+                {
+                    padding: 1,
+                    margin: 1,
+                    borderStyle: "round",
+                },
+            ),
+        ),
+    );
 }
