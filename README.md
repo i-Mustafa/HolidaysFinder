@@ -6,4 +6,9 @@
 
 ## How to use!
 
-> <font color="gray"> $ coming soon  😉 </font>
+HolidaysFinder is easy to use all you have to do is type
+
+> <font color="gray"> npx myholy Country name  </font>
+
+Example: $ npx myholy belgium
+
